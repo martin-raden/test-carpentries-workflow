@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: All in One View</title>
+<title>R tidyverse - kompakt: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -34,13 +34,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="Lesson Description" src="assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="Lesson Description" src="assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -94,7 +94,7 @@
       <img class="small-logo" alt="Lesson Description" src="assets/images/incubator-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Lesson Title
+      R tidyverse - kompakt
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -105,7 +105,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            R tidyverse - kompakt
           </span>
         </li>
         <li class="nav-item">
@@ -141,7 +141,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Lesson Title
+  R tidyverse - kompakt
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -243,7 +243,43 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using RMarkdown</a>
+        <a href="Datenstrukturen.html">1. Datenstrukturen</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="Datenimport.html">2. Datenimport aus Dateien</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="Datenverarbeitung.html">3. Datenverarbeitung</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="Visualisierung.html">4. Visualisierung</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -306,11 +342,11 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using RMarkdown</a></p>
+<section id="aio-Datenstrukturen"><p>Content from <a href="Datenstrukturen.html">Datenstrukturen</a></p>
 <hr>
 <p>Last updated on 2025-06-25 |
 
-        <a href="https://github.com/carpentries/workbench-template-rmd/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/edit/main/episodes/Datenstrukturen.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -322,8 +358,9 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>Welche “Datenarten” gibt es?</li>
+<li>Wie organisiere ich tabellarische Daten?</li>
+<li>Was ist “tidy”?</li>
 </ul>
 </div>
 </div>
@@ -333,138 +370,276 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Standarddatentypen in R</li>
+<li>
+<code>data.frame</code> und <code>tibble</code>
+</li>
+<li>“tidy” Konzept</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h2>
-<hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.txt" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
+<p>Für die Verarbeitung von tabellarischen Daten werden in R i.d.R.
+<code>data.frame</code>s verwendet. Das <code>tidyverse</code> package
+liefert eine erweiterte Version des <code>data.frame</code>s, das
+<code>tibble</code>, welches etwas transparenter in seiner Verwendung
+ist. In einem <code>tibble</code> (oder <code>data.frame</code>)
+entspricht jede Zeile einem Datensatz (oder einer Beobachtung) und jede
+Spalte einer Variable (oder einem Merkmal) dieses Datensatzes. Damit
+haben alle Daten in der gleichen Spalte den gleichen Datentyp, z.B.
+“Zahl” (<code>numeric</code>), “Kommazahl” (<code>double</code>),
+“Ganzzahl” (<code>integer</code>), “Text” (<code>character</code>),
+“Datum” (<code>date</code>), etc. Im Folgenden wird der <a href="https://dplyr.tidyverse.org/reference/storms.html" class="external-link">Beispieldatensatz
+<code>storms</code></a> aus dem <code>dplyr</code> package gezeigt.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="va">storms</span></span></code></pre>
 </div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 19,537 × 13
+   name   year month   day  hour   lat  long status      category  wind pressure
+   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;          &lt;dbl&gt; &lt;int&gt;    &lt;int&gt;
+ 1 Amy    1975     6    27     0  27.5 -79   tropical d…       NA    25     1013
+ 2 Amy    1975     6    27     6  28.5 -79   tropical d…       NA    25     1013
+ 3 Amy    1975     6    27    12  29.5 -79   tropical d…       NA    25     1013
+ 4 Amy    1975     6    27    18  30.5 -79   tropical d…       NA    25     1013
+ 5 Amy    1975     6    28     0  31.5 -78.8 tropical d…       NA    25     1012
+ 6 Amy    1975     6    28     6  32.4 -78.7 tropical d…       NA    25     1012
+ 7 Amy    1975     6    28    12  33.3 -78   tropical d…       NA    25     1011
+ 8 Amy    1975     6    28    18  34   -77   tropical d…       NA    30     1006
+ 9 Amy    1975     6    29     0  34.4 -75.8 tropical s…       NA    35     1004
+10 Amy    1975     6    29     6  34   -74.8 tropical s…       NA    40     1002
+# ℹ 19,527 more rows
+# ℹ 2 more variables: tropicalstorm_force_diameter &lt;int&gt;,
+#   hurricane_force_diameter &lt;int&gt;</code></pre>
+</div>
+<p>Bei der Verwendung von <code>tibble</code>s sind unter den
+Spaltennamen die Datentypen der Spalten abgekürzt dargestellt.</p>
+<p><code>data.frame</code>s oder <code>tibble</code>s können auch aus
+anderen Datenstrukturen erstellt werden, z.B. aus <code>vectors</code>,
+<code>lists</code> oder <code>matrices</code>. Kleinere Datensätze
+können auch direkt als <code>tibble</code> erstellt werden, indem die
+Daten in die Funktion <code>tibble()</code> eingegeben werden.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">marriages</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">tibble</span><span class="op">(</span></span>
+<span>    name <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>,<span class="st">"Diana"</span><span class="op">)</span>,</span>
+<span>    age <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span>, <span class="fl">12</span><span class="op">)</span>,</span>
+<span>    married <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre>
+</div>
+<p>Ziel der Datenverarbeitung ist es, die Daten so zu transformieren,
+dass sie für die Analyse und Visualisierung geeignet sind und ein Format
+wie oben gezeigt vorweisen. Wenn das der Fall ist, sprich</p>
+<ul>
+<li>jede Zeile entspricht einem Datensatz und</li>
+<li>jede Spalte entspricht einer Variable,</li>
+</ul>
+<p>wird der Datensatz als “tidy” bezeichnet, was im Folgenden
+visualisiert wird.</p>
+<figure><img src="https://raw.githubusercontent.com/hadley/r4ds/main/images/tidy-1.png" style="width:40.0%" alt="tidy data concept" class="figure mx-auto d-block"></figure><div id="spaltenzugriff" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="spaltenzugriff" class="callout-inner">
+<h3 class="callout-title">Spaltenzugriff</h3>
+<div class="callout-content">
+<p>Betrachten sie den Datensatz <code>marriages</code> von oben.</p>
+<p><em>Wie können Sie nur die Spalte <code>name</code> aus dem Datensatz
+extrahieren?</em></p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Antwort
+  </h4>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># base R</span></span>
+<span><span class="va">marriages</span><span class="op">$</span><span class="va">name</span>                  <span class="co"># mit "$" ohne Anführungszeichen (Standardfall)</span></span>
+<span><span class="va">marriages</span><span class="op">$</span><span class="va">`name`</span>                <span class="co"># mit "$" und "backtick" quotes für Variablennamen mit Sonderzeichen</span></span>
+<span><span class="va">marriages</span><span class="op">[[</span><span class="st">"name"</span><span class="op">]</span><span class="op">]</span>             <span class="co"># WICHTIG: Doppelte eckige Klammern und Name in quotes, siehe unten !</span></span>
+<span><span class="va">marriages</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>                  <span class="co"># mit doppelter eckiger Klammer und Spaltenindex (nicht empfohlen, sicherer via Namen)</span></span>
+<span><span class="co"># tidyverse dplyr package </span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu">pull</span><span class="op">(</span><span class="va">marriages</span>, <span class="va">name</span><span class="op">)</span>    <span class="co"># ohne "dplyr::" wenn dplyr geladen ist (library(dplyr))</span></span>
+<span><span class="co"># oder in einer pipe, was später diskutiert wird</span></span>
+<span><span class="va">marriages</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">pull</span><span class="op">(</span><span class="va">name</span><span class="op">)</span></span></code></pre>
+</div>
+<p>Achtung: - EINFACHE eckige Klammern <code>marriages["name"]</code>
+geben ein <code>data.frame</code> zurück (<em>REDUZIEREN</em> die
+aktuelle Datenstruktur), während - DOPPELTE eckige Klammern
+<code>marriages[["name"]]</code> den <code>vector</code> der Spalte
+<code>name</code> zurückgeben (also das benannte Element
+<em>EXTRAHIEREN</em>)!</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div id="datentypen" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<div id="datentypen" class="callout-inner">
+<h3 class="callout-title">Datentypen</h3>
 <div class="callout-content">
-
+<p><em>Welche Datentypen haben die Spalten des Datensatzes?</em></p>
 </div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution2">
+  Antwort
+  </h4>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<ul>
+<li>
+<code>name</code>: <code>character</code>
+</li>
+<li>
+<code>age</code>: <code>numeric</code> also generell “Zahlen”
+<ul>
+<li>entspricht i.d.R. <code>double</code> ist eine Unterart von
+<code>numeric</code>, die auch Kommazahlen enthält.</li>
+<li>
+<code>integer</code> wäre auch möglich, aber <code>numeric</code>
+ist der Standarddatentyp für Zahlen in R.</li>
+<li>wenn wir <em>explizit</em> Ganzzahlen definieren wollen, müssen
+diese mit einem “L” versehen werden, z.B. <code>25L</code>, oder die
+Spalte explizit als <code>integer</code> definier/umgewandelt werden,
+z.B. <code>as.integer(c(25, 30, 35))</code>.</li>
+</ul>
+</li>
+<li>
+<code>married</code>: <code>logical</code>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can also include figures generated from R Markdown:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div id="aufbau" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="aufbau" class="callout-inner">
+<h3 class="callout-title">Aufbau</h3>
+<div class="callout-content">
+<p><em>Wieviele Beobachtungen und Variablen hat der Datensatz?</em></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3">
+  Antwort
+  </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<ul>
+<li>Beobachtungen: 4 = Anzahl Zeilen (oder Länge der Spalten)</li>
+<li>Variablen: 3 = Anzahl Spalten</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>Um zu verdeutlichen, worin der Unterschied zwischen
+<code>data.frame</code> und <code>tibble</code> besteht, führen sie
+folgende Code in einer R-Session aus:</p>
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
-<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Sunny side of pyramid"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Shady side of pyramid"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
-<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
-<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Erstellen eines data.frame</span></span>
+<span><span class="fu">data.frame</span><span class="op">(</span> <span class="st">"das sind daten"</span> <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, <span class="st">"das sind auch daten"</span> <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">)</span></span>
+<span><span class="co"># Erstellen eines äquivalenten tibbles</span></span>
+<span><span class="fu">tibble</span><span class="fu">::</span><span class="fu">tibble</span><span class="op">(</span> <span class="st">"das sind daten"</span> <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, <span class="st">"das sind auch daten"</span> <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span> <span class="op">)</span></span></code></pre>
 </div>
-<figure style="text-align: center"><img src="fig/introduction-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid" class="figure mx-auto d-block"><figcaption>
-Sun arise each and every morning
-</figcaption></figure><p>Or you can use standard markdown for static figures with the
-following syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<div id="unterschiede" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div id="unterschiede" class="callout-inner">
+<h3 class="callout-title">Unterschiede</h3>
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p><em>Was fällt ihnen auf?</em></p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4">
+  Antwort
+  </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  das.sind.daten das.sind.auch.daten
+1              1                   4
+2              2                   5
+3              3                   6</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 3 × 2
+  `das sind daten` `das sind auch daten`
+             &lt;dbl&gt;                 &lt;dbl&gt;
+1                1                     4
+2                2                     5
+3                3                     6</code></pre>
+</div>
+<ul>
+<li>Spaltennamen in <code>data.frame</code> werden automatisch
+bereinigt, damit sie den normalen Konventionen für Variablennamen
+entsprechen, z.B. Leerzeichen werden durch Punkte ersetzt.</li>
+<li>
+<code>tibble</code> zeigt die Spaltennamen so an, wie sie eingegeben
+wurden, und unterstützen auch Sonderzeichen in den Spaltennamen.
+<ul>
+<li>beachten Sie, dass Sonderzeichen in Spaltennamen in R nicht
+empfohlen werden, da sie zu Problemen führen können.</li>
+<li>ausserdem müssen solche Spaltennamen später in der Verwendung in
+backtick “`” quotes gesetzt werden, siehe oben</li>
+</ul>
+</li>
+<li>ausserdem (hier nicht zu sehen) zeigt <code>tibble</code> nur die
+ersten 10 Zeilen an, während <code>data.frame</code> alle Zeilen
+anzeigt.</li>
+<li>zudem werden die Datentypen für jede Spalte in <code>tibble</code>
+angezeigt, was bei <code>data.frame</code> nicht der Fall ist.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -473,23 +648,1368 @@ this:</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Spalten in einem <code>tibble</code> werden auch Variablen (des
+Datensatzes) genannt.
+<ul>
+<li>Eine Spalte ist ein <code>vector</code>, d.h. es können nur Werte
+des gleichen Datentyps enthalten sein.</li>
+</ul>
+</li>
+<li>Zeilen in einem <code>tibble</code> werden auch Beobachtungen (des
+Datensatzes) genannt.</li>
+<li>Ein Datensatz ist “tidy”,
+<ul>
+<li>wenn jede Zeile einem Datensatz und jede Spalte einer Variable
+entspricht.</li>
+<li>Vereinfacht: wenn man beim Visualisieren der Daten nur jeweils eine
+Zeile pro Datenpunkt benötigt und keine doppelt verwendet wird.</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 </div>
+<hr>
+<p>Dieses Dokument wurde mit Unterstützung von GitHub Copilot erstellt,
+einem KI-gestützten Autocompletion-Tool, das auf der OpenAI
+GPT-3-Technologie basiert.</p></section><section id="aio-Datenimport"><p>Content from <a href="Datenimport.html">Datenimport aus Dateien</a></p>
+<hr>
+<p>Last updated on 2025-06-25 |
+
+        <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/edit/main/episodes/Datenimport.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Wie importiere ich Daten? (<code>readr</code>, <code>readxl</code>,
+…)</li>
+<li>Auf was muss ich achten?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Datenimport via <code>readr</code> und <code>readxl</code>
+</li>
+<li>Kodierung von Zahlen und Texten</li>
+<li>Pfadangaben</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In R können Daten aus verschiedenen Quellen und von verschiedenen
+Orten eingelesen werden.</p>
+<p>Die gängigsten Quellen sind:</p>
+<ul>
+<li>Textdateien (z.B. <code>.csv</code>, <code>.tsv</code>,
+<code>.txt</code>)</li>
+<li>Excel-Dateien (z.B. <code>.xlsx</code>, <code>.xls</code>)</li>
+<li>Datenbanken (z.B. <code>MySQL</code>, <code>PostgreSQL</code>,
+<code>SQLite</code>)</li>
+</ul>
+<p>Die gängigsten Orte sind:</p>
+<ul>
+<li>lokale Dateien</li>
+<li>URLs, also direkter Datenimport aus dem Internet oder lokalem
+Netzwerk</li>
+</ul>
+<p>Im Folgenden einige Beispiele zum Einlesen von Daten aus Dateien in
+R. Die lokalen Dateien müssen sich im <em>Arbeitsverzeichnis</em>
+befinden, das mit <code>getwd()</code> abgefragt und mit
+<code>setwd()</code> gesetzt werden kann (oder mit entsprechenden
+Menüeinträgen in RStudio), oder mit vollem Verzeichnisinformationen
+angegeben werden (nicht gezeigt und nicht empfohlen). Um den folgenden
+Beispielcode mit lokalen Dateien auszuführen, müssen daher die Dateien
+<a href="data/storms-2019-2021.csv">storms-2019-2021.csv</a> und <a href="data/storms-2019-2021.xlsx">storms-2019-2021.xlsx</a> erst ins
+aktuelle Arbeitsverzeichnis gedownloaded werden.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">readr</span><span class="op">)</span></span>
+<span><span class="co"># CSV aus dem Internet</span></span>
+<span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/tidyverse/dplyr/master/data-raw/storms.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># lokale Excel-Datei</span></span>
+<span><span class="fu">readxl</span><span class="fu">::</span><span class="fu">read_xlsx</span><span class="op">(</span><span class="st">"storms-2019-2021.xlsx"</span>,</span>
+<span>                  sheet <span class="op">=</span> <span class="st">"storms-2020"</span><span class="op">)</span> <span class="co"># explizite Angabe des Tabellenblatts</span></span>
+<span></span>
+<span><span class="co"># lokale CSV Datei Semikolon getrennt (";") und mit westeuropäischem Zahlenformat ("," als Dezimaltrenner)</span></span>
+<span><span class="fu">read_csv2</span><span class="op">(</span><span class="st">"storms-2019-2021.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># explizites Einstellen des Daten- und Dateiformats</span></span>
+<span><span class="co"># (hier analog zu den Standardeinstellungen von `read_csv2()`)</span></span>
+<span><span class="fu">read_delim</span><span class="op">(</span></span>
+<span>  <span class="st">"storms-2019-2021.csv"</span>, <span class="co"># Dateiname</span></span>
+<span>  delim <span class="op">=</span> <span class="st">";"</span>, <span class="co"># Spaltentrenner der Datei</span></span>
+<span>  locale <span class="op">=</span> <span class="fu">locale</span><span class="op">(</span> <span class="co"># zusätzliche Einstellungen wie gespeicherte Informationen kodiert sind</span></span>
+<span>    decimal_mark <span class="op">=</span> <span class="st">","</span>, <span class="co"># Dezimaltrenner</span></span>
+<span>    grouping_mark <span class="op">=</span> <span class="st">"."</span>, <span class="co"># Tausendertrenner</span></span>
+<span>    encoding <span class="op">=</span> <span class="st">"latin1"</span> <span class="co"># (alte) westeuropäisches Buchstabenkodierung (z.B. Umlaute)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre>
+</div>
+<p>Beachten sie im letzten Beispiel das explizite Setzen des
+Textencodings, um sicherzustellen, dass Umlaute korrekt eingelesen
+werden (hier im Beispiel wird <code>latin1</code> verwendet, was für
+westeuropäische Länder wie Deutschland oder Frankreich üblich ist bzw.
+war). Dies ist vor allem beim <em>Import von alten Daten</em> wichtig,
+die in einem anderen Zeichensatz kodiert sein könnten. Heutzutage wird
+meist <code>UTF-8</code> verwendet, was ein internationaler Standard ist
+und alle Zeichen korrekt darstellt. Dies ist auch das Standardencoding
+für die meisten Funktionen wie z.B. in <code>readr</code> und
+<code>readxl</code>.</p>
+<p>Zudem wird im obigen <code>read_delim()</code> Beispiel die
+Zahlenkodierung explizit gesetzt. Das heisst, dass Dezimaltrenner und
+Tausendertrenner explizit angegeben werden, da z.B. westeuropäische
+Länder wie Deutschland oder Frankreich Dezimaltrenner und
+Tausendertrenner vertauscht haben im Vergleich zu englischsprachigen
+Ländern (welche die Standardspezifikationen für CSV-Dateien sind). Daher
+wird in den meisten Skriptsprachen eine zusätzliche
+CSV-Datei-Spezifikation <code>read_csv2()</code> angeboten, die explizit
+für westeuropäische Länder konfiguriert ist und implizit die Spalten-
+und Dezimaltrennzeichen wie im obigen Beispiel setzt.</p>
+<p>Das Schreiben von Dateien erfolgt analog, indem einfach
+<code>write_</code> anstelle von <code>read_</code> verwendet wird.</p>
+<p>Die Funktionen des <code>readr</code> Paketes sind übersichtlich in
+dessen Cheat Sheet zusammengefasst.</p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf" class="external-link"><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/thumbnails/data-import-cheatsheet-thumbs.png" style="width:100.0%" alt="CLICK TO ENLARGE: cheat sheet for readr ackage" class="figure"></a></p>
+<div id="frage-zu-csv-import" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="frage-zu-csv-import" class="callout-inner">
+<h3 class="callout-title">Frage zu CSV Import</h3>
+<div class="callout-content">
+<p><em>Was ist der Unterschied zwischen <code>read_csv()</code> und
+<code>read_csv2()</code>?</em></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Antwort
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p><code>read_csv()</code> und <code>read_csv2()</code> sind Funktionen
+aus dem <code>readr</code> package, die beide CSV-Dateien einlesen
+können. Der Unterschied liegt in der Standardkonfiguration der
+Funktionen. <code>read_csv()</code> ist für CSV-Dateien mit Komma als
+Dezimaltrenner und Punkt als Tausendertrenner konfiguriert (z.B. für
+englische oder amerikanische Datenkodierungen), während
+<code>read_csv2()</code> für CSV-Dateien mit Semikolon als
+Spaltentrenner und Komma als Dezimaltrenner konfiguriert ist (wie es in
+Westeuropa wie Deutschland oder Frankreich Standard ist).</p>
+</div>
+</div>
+</div>
+</div>
+<div id="aufgabe-datenimport" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="aufgabe-datenimport" class="callout-inner">
+<h3 class="callout-title">Aufgabe: Datenimport</h3>
+<div class="callout-content">
+<p>Führen sie die obigen Beispiele aus und passen sie sie an, um die
+Dateien <code>storms-2019-2021.csv</code> und
+<code>storms-2019-2021.xlsx</code> einzulesen. Hierzu müssen diese
+Dateien ggf. zuvor gedownloaded werden (oder sie verwenden direkt die
+URL zu den online verfügbaren Dateien).</p>
+<p><em>Wieviele Zeilen haben die jeweiligen Datensätze? Und wie erklärt
+sich der Unterschied?</em></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Antwort
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>Die Datensätze haben unterschiedliche Größen:</p>
+<ul>
+<li>
+<code>storms-2019-2021.csv</code> hat 19 Zeilen, es umfasst die
+Jahre 2019-2021.</li>
+<li>
+<code>storms-2019-2021.xlsx</code> hat 10 Zeilen, es umfasst nur das
+Jahr 2020 da nur ein einzelnes Datenblatt importiert wurde.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="pfade-und-arbeitsverzeichnis">Pfade und Arbeitsverzeichnis<a class="anchor" aria-label="anchor" href="#pfade-und-arbeitsverzeichnis"></a>
+</h2>
+<hr class="half-width">
+<p>In R können Dateien relativ zum <em>Arbeitsverzeichnis</em> geladen
+werden. Das Arbeitsverzeichnis ist der Ordner, in dem R nach Dateien
+sucht, wenn keine vollständigen Pfade angegeben sind. Das
+Arbeitsverzeichnis kann mit <code>getwd()</code> abgefragt und mit
+<code>setwd()</code> geändert werden. In RStudio kann das
+Arbeitsverzeichnis auch über das Menü “Session” -&gt; “Set Working
+Directory” -&gt; “To Source File Location” gesetzt werden.</p>
+<p>Dies erlaubt das Laden von Dateien ohne Angabe des vollständigen
+Pfades, wenn sich die Dateien im Arbeitsverzeichnis befinden. Der große
+Vorteil ist, dass der Code portabler wird, da er nicht mehr von
+absoluten Pfaden (also wwo die Daten auf ihrem Computer genau liegen)
+abhängt.</p>
+<p>Alternativ können auch <em>relative Pfade</em> verwendet werden, um
+Dateien in Unterordnern relativ zum Arbeitsverzeichnis zu laden. Zum
+Beispiel, wenn sich die Datei <code>data.csv</code> im Unterordner
+<code>data</code> des Arbeitsverzeichnisses befindet, kann sie mit
+<code>read_csv("data/data.csv")</code> geladen werden.</p>
+<p>Wenn nötig, können auch vollständige Pfade verwendet werden, um
+Dateien von beliebigen Orten auf dem Computer zu laden. Das nennt man
+dann einen <em>absoluten Pfad</em>. Ein Beispiel auf einem
+Windows-System wäre
+<code>read_csv("C:/Users/Username/Documents/data.csv")</code>.</p>
+<p>Wenn sie die letzte Pfadangabe mit der Standard-Windows-Schreibweise
+vergleichen, werden sie feststellen, dass diese normalerweise mit
+Backslashes <code>\</code> arbeitet, also hier
+<code>"C:\Users\Username\Documents\data.csv"</code>. Das Problem ist,
+dass der Backslash in R als Escape-Zeichen verwendet wird, um spezielle
+TEXT-Zeichen zu kodieren. Daher wird der Backslash in Pfadangaben in R
+oft verdoppelt, um dies zu umgehen. Also würde der Pfad in R so
+aussehen: <code>"C:\\Users\\Username\\Documents\\data.csv"</code>.
+Alternativ können sie auch in Windows (wie im obigen Beispiel) die
+“Linux-Schreibweise” verwenden, die mit Schrägstrichen <code>/</code>
+arbeitet, die in R ohne Probleme verwendet werden können.</p>
+<p>Falls sie unbedingt (z.B. für Copy-and-Paste Einfügen) die
+Backslash-Notation der Pfade verwenden wollen, aber nicht Umformatieren
+möchten, können sie den Pfad auch als <a href="https://r4ds.hadley.nz/strings.html#sec-raw-strings" class="external-link"><em>raw
+string</em></a> codieren, in dem sie ihn statt mit Anführungszeichen
+<code>""</code> mit <code>r"()"</code> umschließen. Also in obigem
+Beispiel <code>r"(C:\Users\Username\Documents\data.csv)"</code>, wobei
+sie runde durch eckige Klammern tauschen können, falls ihr Pfad auch
+runde Klammern enthält.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Dateinamen sind Textinformation und müssen in Anführungszeichen
+gesetzt werden.</li>
+<li>Pfade können absolut (eher schlecht) oder relativ zum
+Arbeitsverzeichnis angegeben werden. Letzteres ist portabler und
+empfohlen.</li>
+<li>Das Arbeitsverzeichnis kann mit <code>getwd()</code> und
+<code>setwd()</code> abgefragt und gesetzt werden.</li>
+<li>In Microsoft Windows können Pfade auch mit Schrägstrichen
+<code>/</code> statt Backslashes <code>\</code> geschrieben werden.</li>
+<li>Achten sie auf die korrekte Kodierung von Textdateien, um Umlaute
+und Sonderzeichen korrekt einzulesen.</li>
+<li>Denken sie daran, dass deutsche CSV-Dateien oft Semikolon
+(<code>;</code>) als Trennzeichen und Komma <code>,</code> als
+Dezimaltrenner verwenden.</li>
+<li>Excel-Dateien enthalten i.d.R. mehrere Blätter, die einzeln
+importiert werden müssen.</li>
+<li>Zusammenfassung im <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf" class="external-link"><code>readr</code>
+Cheat Sheet</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<p>Dieses Dokument wurde mit Unterstützung von GitHub Copilot erstellt,
+einem KI-gestützten Autocompletion-Tool, das auf der OpenAI
+GPT-3-Technologie basiert.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section>
+</section></section><section id="aio-Datenverarbeitung"><p>Content from <a href="Datenverarbeitung.html">Datenverarbeitung</a></p>
+<hr>
+<p>Last updated on 2025-06-25 |
+
+        <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/edit/main/episodes/Datenverarbeitung.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Wie baue ich komplexe Workflows mit pipes?</li>
+<li>Wie transformiere ich Tabellen?</li>
+<li>Wie bearbeite ich Text?</li>
+<li>Wie führe ich mehrere Datensätze zusammen?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Überblick über die Möglichkeiten der Datenverarbeitung mit
+<code>tidyverse</code> Paketen</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="workflows-mittels-piping">Workflows mittels Piping<a class="anchor" aria-label="anchor" href="#workflows-mittels-piping"></a>
+</h2>
+<hr class="half-width">
+<p>In vielen Datenverarbeitungssprachen ist der Pipe-Operator ein
+nützliches Werkzeug, um Arbeitsschritte zu verketten, sodass das
+Abspeichern von Zwischenergebnisse in Variablen vermieden werden
+kann.</p>
+<p>Seit R 4.1.0 ist der Pipe-Operator <code>|&gt;</code> standardmäßig
+in R enthalten. Alternativ bietet das <code>magrittr</code> package den
+Pipe-Operator <code>%&gt;%</code>, welcher eine etwas umfangreichere
+Funktionalität bietet. Wer sich für die Unterschiede interessiert, kann
+diese im <a href="https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/" class="external-link">Blogbetrag
+dazu</a> nachlesen. Für die meisten Anwendungen ist der
+Standard-Pipe-Operator <code>|&gt;</code> ausreichend und äquivalent zu
+<code>%&gt;%</code> verwendbar.</p>
+<p>Der Pipe-Operator ist ein nützliches Werkzeug, um den Code lesbarer
+zu machen und die Arbeitsschritte in einer logischen Reihenfolge zu
+verketten. Hierbei wird das Ergebnis des vorherigen Arbeitsschrittes als
+erstes Argument des nächsten Arbeitsschrittes verwendet. Da das erste
+Argument von (den meisten) Funktionen der Datensatz ist, ermöglicht dies
+die Verknüpfung von Arbeitsschritten zu einem Workflow ohne
+Zwischenergebnisse speichern zu müssen oder Funktionsaufrufe zu
+verschachteln.</p>
+<p>Zum Beispiel:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># einfaches Beispiel zur Verarbeitung eines Vektors mit base R Funktionen</span></span>
+<span></span>
+<span><span class="co"># verschachtelte Funktionsaufrufe</span></span>
+<span><span class="co"># entspricht der Leserichtung von rechts nach links</span></span>
+<span><span class="co"># und einer Ergebnisbeschreibung ala "Wurzel der Summe ohne NA von 1, 2, 3, NA"</span></span>
+<span><span class="fu">sqrt</span><span class="op">(</span> <span class="fu">sum</span><span class="op">(</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="cn">NA</span><span class="op">)</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span> <span class="op">)</span> <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># mit Pipe-Operator</span></span>
+<span><span class="co"># entspricht der Leserichtung von links nach rechts</span></span>
+<span><span class="co"># und einer Beschreibung der Arbeitsschritte in ihrer Reihenfolge</span></span>
+<span><span class="co"># ala "nehme 1, 2, 3, NA, summiere ohne NA und davon die Wurzel"</span></span>
+<span><span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="cn">NA</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">sum</span><span class="op">(</span>na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
+<span>  <span class="fu">sqrt</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># ok, hier nicht zwingend nötig, aber zur Veranschlaulichung des Prinzips.. ;)</span></span></code></pre>
+</div>
+<p>Pipe-basierte workflows sind …</p>
+<ul>
+<li>intuitiv lesbar, da sie der normalen Leserichtung entsprechen.</li>
+<li>einfacher zu schreiben, da die umschließende Klammerung von
+Funktionsaufrufen entfällt. Funktionsargumente sind direkt den
+jeweiligen Funktionen zuordenbar.</li>
+<li>einfach zu erweitern, da neue Arbeitsschritte einfach an das Ende
+der Kette angehängt werden können (z.B.
+<code>write_csv("bla.csv")</code> oder bestehende Arbeitsschritte
+ausgetauscht werden können.</li>
+<li>reduzieren oftmals die Anzahl der temporären Variablen, die im
+globalen Workspace herumliegen und die Lesbarkeit des Codes
+beeinträchtigen.</li>
+<li>einfach zu debuggen, da Zwischenergebnisse einfach ausgegeben werden
+können (einfach <code>view()</code> oder <code>print()</code> an das
+Ende der entsprechenden Zeile anhängen).</li>
+<li>einfach wiederzuverwenden, da der gesamte Workflow in einer Zeile
+zusammengefasst ist und immer als Block aufgerufen wird. Dadurch können
+keine Zwischenschritte vergessen werden und der Workflow ist immer
+konsistent.</li>
+</ul>
+<div id="mehrzeilige-r-kommandos" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="mehrzeilige-r-kommandos" class="callout-inner">
+<h3 class="callout-title">Mehrzeilige R Kommandos</h3>
+<div class="callout-content">
+<p><strong>Wichtig:</strong> R Kommandos können über mehrere Zeilen
+verteilt werden, wie im obigen Beispiel zu sehen ist, was die
+Übersichtlichkeit des Codes erhöht.</p>
+<p>Hierzu wird z.B. der Pipe-Operator <code>|&gt;</code> ans Ende der
+Zeile geschrieben und der nächste Arbeitsschritt in der nächsten Zeile
+fortgesetzt. Gleiches gilt für jeden Operator (<code>+</code>,
+<code>==</code>, <code>&amp;</code>, ..) sowie unvollständige
+Funktionsaufrufe, bei denen die Klammerung noch nicht geschlossen ist
+(d.h. schließende Klammer wird in der nächsten oder einer späteren Zeile
+geschrieben).</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="tabellen-verarbeiten">Tabellen verarbeiten<a class="anchor" aria-label="anchor" href="#tabellen-verarbeiten"></a>
+</h2>
+<hr class="half-width">
+<p>Die Transformation von Daten erfolgt i.d.R. mittels des
+<code>dplyr</code> packages.</p>
+<p><em>Grundlegend gilt: das erste Argument einer Funktion ist immer der
+Datensatz!</em></p>
+<p>Innerhalb von <code>dplyr</code> Funktionen können <em>Spaltennamen
+ohne Anführungzeichen</em> (quoting) verwendet werden.</p>
+<p>Basistransformationen sind:</p>
+<ul>
+<li>Filtern von Zeilen mit gegebenen Kriterien (formulieren was man
+BEHALTEN will!)
+<ul>
+<li>
+<code>filter(storms, year == 2020)</code> = alle Sturmdaten aus dem
+Jahr 2020</li>
+<li>
+<code>filter(storms, year == 2020 &amp; month == 6)</code> = alle
+Sturmdaten aus dem Juni 2020</li>
+<li>
+<code>filter(storms, !is.na(category))</code> = alle Sturmdaten, bei
+denen die Kategorie bekannt ist</li>
+</ul>
+</li>
+<li>Konkrete Zeilenauswahl (via Index oder Anzahl)
+<ul>
+<li>
+<code>slice(storms, 1, 3, 5)</code> = die Zeilen 1, 3 und 5</li>
+<li>
+<code>slice_tail(storms, n=10)</code> = die 10 letzten Zeilen</li>
+<li>
+<code>slice_max(storms, pressure)</code> = die Zeile mit dem
+höchsten Wert in der Spalte <code>pressure</code>
+</li>
+</ul>
+</li>
+<li>Sortieren von Zeilen
+<ul>
+<li>
+<code>arrange(storms, year)</code> = Sturmdaten nach Jahr
+aufsteigend sortieren</li>
+<li>
+<code>arrange(storms, year, desc(month))</code> = Sturmdaten
+aufsteigend nach Jahr sortieren und innerhalb eines Jahres absteigend
+nach Monat</li>
+</ul>
+</li>
+<li>Duplikate entfernen
+<ul>
+<li>
+<code>distinct(storms)</code> = alle Zeilen mit identischen Werten
+in allen Spalten entfernen</li>
+<li>
+<code>distinct(storms, year, month, day)</code> = alle Zeilen mit
+gleichen Werten in den Spalten <code>year</code>, <code>month</code> und
+<code>day</code> entfernen (reduziert die Spalten auf die
+Ausgewählten)</li>
+<li>
+<code>distinct(storms, year, month, day, .keep_all = TRUE)</code> =
+alle Zeilen mit gleichen Werten in den Spalten <code>year</code>,
+<code>month</code> und <code>day</code> entfernen, aber <em>alle Spalten
+behalten</em>
+</li>
+</ul>
+</li>
+<li>Auswählen/Entfernen von Spalten
+<ul>
+<li>
+<code>select(storms, name, year, month, day)</code> = nur Spalten
+mit Zeitinformation und Namen der Stürme behalten</li>
+<li>
+<code>select(storms, -year, -month, -day)</code> = Spalte mit
+Zeitinformation entfernen</li>
+</ul>
+</li>
+<li>Umbenennen von Spalten
+<ul>
+<li>
+<code>rename(storms, sturmname = name)</code> = Spalte
+<code>name</code> in <code>sturmname</code> umbenennen</li>
+</ul>
+</li>
+<li>Zusammenfassen von Daten: nur eine Zeile mit aggregierten
+Informationen (z.B. Mittelwert, Summe, Anzahl, etc.) pro Gruppe
+<ul>
+<li>
+<code>summarize(storms, max_wind = max(wind), num_datasets = n())</code>
+= maximale Windgeschwindigkeit und Anzahl der Datensätze (Zeilen)</li>
+</ul>
+</li>
+<li>Gruppierung von Daten = “Zerlegung” des Datensatzes in Teiltabellen,
+für die anschliessende Arbeitsschritte unabängig voneinander
+durchgeführt werden. Wird i.d.R. verwendet, wenn die Aufgabe “pro …”
+oder “für jede …” lautet.
+<ul>
+<li>
+<code>group_by(storms, year)</code> = Gruppierung der Sturmdaten
+nach Jahr (aber noch keine Aggregation!)</li>
+<li>
+<code>group_by(storms, year) |&gt;  summarize(max_wind = max(wind))</code>
+= maximale Windgeschwindigkeit <em>pro Jahr</em> (eine “summarize” Zeile
+pro Teiltabelle = Gruppe = Jahr)</li>
+<li>
+<code>group_by(storms, year) |&gt; filter(wind == max(wind)) |&gt; ungroup()</code>
+= alle Sturmdaten, bei denen die maximale Windgeschwindigkeit <em>pro
+Jahr</em> erreicht wurde (keine Zusammenfassung!)</li>
+<li>Grouping ist ein extrem mächtiges Werkzeug, das in vielen
+Situationen verwendet wird, um Daten zu transformieren. Allerdings
+braucht es etwas Übung, um zu verstehen, wie es funktioniert.</li>
+</ul>
+</li>
+<li>Spalten hinzufügen/ausrechnen oder bestehende Spalten verändern
+(z.B. Einheiten umrechnen)
+<ul>
+<li>
+<code>mutate(storms, wind_kmh = wind * 1.60934)</code> =
+Windgeschwindigkeit in km/h berechnen und als <em>neue Spalte
+hinzufügen</em>
+</li>
+<li>
+<code>mutate(storms, wind = wind * 1.60934)</code> =
+Windgeschwindigkeit in km/h umrechnen und <em>bestehende Spalte
+überschreiben</em>
+</li>
+<li>
+<code>mutate(storms, wind_kmh = wind * 1.60934, wind_kmh_rounded = round(wind_kmh, 1))</code>
+= es können auch mehrere Spalten auf einmal berechnet werden und dabei
+direkt neue angelegte Spalten in anschliessenden Formeln verwendet
+werden (hier Runden auf eine Nachkommastelle)</li>
+</ul>
+</li>
+</ul>
+<div id="stürme-vor-1980" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="stürme-vor-1980" class="callout-inner">
+<h3 class="callout-title">Stürme vor 1980</h3>
+<div class="callout-content">
+<p><em>Erstelle eine Tabelle, welche für jeden Sturm vor 1980 neben
+dessen Namen nur das Jahr und dessen Status beinhaltet und nach Jahr und
+Status sortiert ist.</em></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Hinweise
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Verwenden sie eine Pipe die folgende Funktionen verbindet -
+<code>filter()</code> - <code>select()</code> - <code>distinct()</code>
+- <code>arrange()</code></p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Lösung
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Ausgangsdatensatz = Beginn der Pipe</span></span>
+<span><span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Zeilen filtern</span></span>
+<span>  <span class="fu">filter</span><span class="op">(</span><span class="va">year</span> <span class="op">&lt;</span> <span class="fl">1980</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Spalten auswählen</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">name</span>, <span class="va">year</span>, <span class="va">status</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># doppelte Zeilen entfernen</span></span>
+<span>  <span class="fu">distinct</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># sortieren</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="va">year</span>, <span class="va">status</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 129 × 3
+   name      year status
+   &lt;chr&gt;    &lt;dbl&gt; &lt;fct&gt;
+ 1 Amy       1975 extratropical
+ 2 Blanche   1975 extratropical
+ 3 Doris     1975 extratropical
+ 4 Eloise    1975 extratropical
+ 5 Gladys    1975 extratropical
+ 6 Hallie    1975 extratropical
+ 7 Blanche   1975 hurricane
+ 8 Caroline  1975 hurricane
+ 9 Doris     1975 hurricane
+10 Eloise    1975 hurricane
+# ℹ 119 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="gruppieren-und-aggregieren">Gruppieren und Aggregieren<a class="anchor" aria-label="anchor" href="#gruppieren-und-aggregieren"></a>
+</h2>
+<hr class="half-width">
+<p>Eine der wichtigsten Funktionen in <code>dplyr</code> ist das
+Gruppieren von Daten und das Aggregieren von Werten innerhalb dieser
+Gruppen. Dies wird in der Regel mit den Funktionen
+<code>group_by()</code> und <code>summarize()</code> durchgeführt.</p>
+<p><code>group_by()</code> teilt den Datensatz in Gruppen (imaginäre
+Teiltabellen) auf, basierend auf den Werten in einer oder mehreren
+Spalten. Im Anschluß wird, vereinfacht gesagt, für jede Gruppe eine
+separate Berechnung durchgeführt.</p>
+<p>Die Funktion <code>summarize()</code> ist die am häufigsten
+verwendete Funktion, um Werte innerhalb dieser Gruppen zu
+aggregieren.</p>
+<p>Ein einfaches Beispiel:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Tabelle nach Jahr gruppieren</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># maximale Windgeschwindigkeit pro Jahr berechnen</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>max_wind <span class="op">=</span> <span class="fu">max</span><span class="op">(</span><span class="va">wind</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 48 × 2
+    year max_wind
+   &lt;dbl&gt;    &lt;int&gt;
+ 1  1975      120
+ 2  1976      105
+ 3  1977      150
+ 4  1978      120
+ 5  1979      150
+ 6  1980      165
+ 7  1981      115
+ 8  1982      115
+ 9  1983      100
+10  1984      115
+# ℹ 38 more rows</code></pre>
+</div>
+<p>In diesem Beispiel wird die Tabelle <code>storms</code> nach dem Jahr
+gruppiert und für jede Gruppe (d.h. jedes Jahr) die maximale
+Windgeschwindigkeit berechnet. Das Ergebnis ist eine Tabelle mit zwei
+Spalten: <code>year</code> und <code>max_wind</code>.</p>
+<div id="achtung" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="achtung" class="callout-inner">
+<h3 class="callout-title">Achtung</h3>
+<div class="callout-content">
+<p>Zu beachten ist, dass Gruppierungen in <code>dplyr</code> nur
+virtuell sind und nicht zu einer physischen Aufteilung des Datensatzes
+führen. Allerdings wird diese Gruppierung aufrecht erhalten, bis sie
+explizit aufgehoben wird (z.B. durch <code>ungroup()</code>) oder dies
+implizit durch eine andere Funktion geschieht (z.B. “schließt”
+<code>summarize()</code> die letzte Gruppierung).</p>
+</div>
+</div>
+</div>
+<div id="gruppiertes-filtern" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="gruppiertes-filtern" class="callout-inner">
+<h3 class="callout-title">Gruppiertes Filtern</h3>
+<div class="callout-content">
+<p><em>Erstelle eine Tabelle, welche für jeden Sturmstatus das Jahr und
+den Namen des letzten Sturms auflistet.</em></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3">
+  Erwartete Ausgabe
+  </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 9 × 3
+  status                  year name
+  &lt;fct&gt;                  &lt;dbl&gt; &lt;chr&gt;
+1 tropical wave           2018 Kirk
+2 subtropical depression  2020 Dolly
+3 disturbance             2022 Julia
+4 extratropical           2022 Martin
+5 subtropical storm       2022 Nicole
+6 hurricane               2022 Nicole
+7 tropical storm          2022 Nicole
+8 tropical depression     2022 Nicole
+9 other low               2022 Nicole</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4">
+  Hinweise
+  </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<ul>
+<li>Gruppieren sie die Tabellendaten nach <code>status</code>, um für
+jeden Sturmtyp eine “Teiltabelle” zu erhalten</li>
+<li>Um den letzten Sturm zu finden
+<ul>
+<li>Möglichkeit 1: neue Spalte mit Zeitinformation zusammensetzen und
+damit die Zeile mit maximalen Datum (pro Teiltabelle) extrahieren</li>
+<li>Möglichkeit 2: Teiltabellen bzgl. Zeitspalten sortieren und erste
+bzw. letzte Zeile extrahieren</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5">
+  Lösungen
+  </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div class="accordion-body">
+<div class="section level3">
+<h3 id="alternative-1">Alternative 1<a class="anchor" aria-label="anchor" href="#alternative-1"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># decompose table by storm status</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">status</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># encode time information of each entry in a single column</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>date <span class="op">=</span> <span class="fu">parse_date_time</span><span class="op">(</span><span class="fu">str_c</span><span class="op">(</span><span class="va">year</span>,<span class="va">month</span>,<span class="va">day</span>,<span class="va">hour</span>,sep<span class="op">=</span><span class="st">"-"</span><span class="op">)</span>, <span class="st">"%Y-%m-%d-%H"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  </span>
+<span>  <span class="co"># filter for the latest date</span></span>
+<span>  <span class="fu">filter</span><span class="op">(</span><span class="va">date</span> <span class="op">==</span> <span class="fu">max</span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span><span class="co"># ALTERNATIVELY cut out row with latest date</span></span>
+<span>  <span class="co"># slice_max(date, n=1) |&gt;</span></span>
+<span>  </span>
+<span>  <span class="co"># rejoin table information and undo grouping</span></span>
+<span>  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">status</span>, <span class="va">year</span>, <span class="va">name</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="alternative-2">Alternative 2<a class="anchor" aria-label="anchor" href="#alternative-2"></a>
+</h3>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># decompose table by storm status</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">status</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  </span>
+<span>  <span class="co"># sort ascending by date (hierarchical sorting)</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="va">year</span>,<span class="va">month</span>,<span class="va">day</span>,<span class="va">hour</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># pick last row w.r.t. sorting</span></span>
+<span>  <span class="fu">slice_tail</span><span class="op">(</span>n<span class="op">=</span><span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span><span class="co"># ALTERNATIVELY pick row with last index</span></span>
+<span>  <span class="co"># slice( n() ) |&gt; </span></span>
+<span>  </span>
+<span><span class="co"># OR do both (sort+pick) directly with slice_max</span></span>
+<span>  <span class="co"># slice_max( tibble(year,month,day,hour), n=1, with_ties = F ) |&gt; </span></span>
+<span>  </span>
+<span>  <span class="co"># rejoin table information and undo grouping</span></span>
+<span>  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">status</span>, <span class="va">year</span>, <span class="va">name</span><span class="op">)</span> </span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Eine Zusammenfassung der wichtigsten Funktionen in <code>dplyr</code>
+finden sich in dessen Cheat Sheet.</p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf" class="external-link"><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/thumbnails/data-transformation-cheatsheet-thumbs.png" style="width:100.0%" alt="CLICK TO ENLARGE: cheat sheet for dplyr ackage" class="figure"></a></p>
+</section><section><h2 class="section-heading" id="tabellengestalt-ändern">Tabellengestalt ändern<a class="anchor" aria-label="anchor" href="#tabellengestalt-%C3%A4ndern"></a>
+</h2>
+<hr class="half-width">
+<p>Die “tidy” Form ist eine spezielle Form von tabellarischen Daten, die
+für viele Datenverarbeitungsschritte geeignet ist. In der “tidy” Form
+sind die Daten so organisiert, dass jede Beobachtung (z.B. Messung) in
+einer Zeile notiert ist und jede Variable (also z.B. Beschreibungungen
+und Messwerte) eine Spalte definieren. Diese Art der Tabellenform wird
+auch “long table” oder “schmal” genannt, weil die Daten in einer langen,
+schmalen Tabelle organisiert sind.</p>
+<p>Allerdings werden Rohdaten häufig in einer “ungünstigen” Form
+vorliegen, die für die weitere Verarbeitung nicht optimal ist. Manuelle
+Datenerfassung erfolgt oft in grafischen Oberflächen wie MS Excel, worin
+die Daten i.d.R. in einer “breiten” oder “wide table” Form gespeichert,
+in der eine Variable (z.B. Messwert) in mehreren Spalten gespeichert
+ist. In der “breiten” Form sind die Daten so organisiert, dass
+Beobachtungen (und ihre Messwerte) in Spalten gruppiert sind, während
+die Variablen in den Zeilen stehen.</p>
+<p>Hier ein Beispiel aus dem Tutorial <a href="https://tavareshugo.github.io/r-intro-tidyverse-gapminder/" class="external-link">Introduction
+to R/tidyverse for Exploratory Data Analysis</a></p>
+<figure><img src="https://github.com/tavareshugo/r-intro-tidyverse-gapminder/blob/e08446803314d9c8d59f309e3dee7b1cdd9a3158/fig/07-tidyr_pivot.png?raw=true" alt="wide and long table examples and respective pivoting calls" width="500" class="figure mx-auto d-block"></figure><p>Das obige Beispiel zeigt eine “breite” Tabelle (rechts) und eine
+“lange” Tabelle (links) mit den gleichen Daten. Die Transformation
+zwischen beiden Formaten kann durch die Funktionen
+<code>pivot_longer()</code> und <code>pivot_wider()</code> erreicht
+werden. Beachten sie im Beispiel, dass die Spaltennamen des wide table
+Formats in beide Transformationsrichtungen verarbeitet werden
+können.</p>
+<div id="vor--und-nachteile" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="vor--und-nachteile" class="callout-inner">
+<h3 class="callout-title">Vor- und Nachteile</h3>
+<div class="callout-content">
+<p>Während das wide table Format kompakter und damit ggf. besser zur
+Datenerfassung und -übersicht geeignet ist, ist das long table Format
+besser für die Datenanalyse und -visualisierung geeignet. In letzterem
+liegt Information redundant vor, da in jeder Zeile die komplette
+Information einer Beobachtung vorliegen muss.</p>
+</div>
+</div>
+</div>
+<p>Die tidyverse Bibliothek <code>tidyr</code> bietet Funktionen, um
+Daten zwischen diesen beiden Formen zu transformieren. Dies wird auch
+als “reshaping” oder “pivotieren” bezeichnet. Hiermit können Spalten in
+Zeilen und umgekehrt umgeformt werden.</p>
+<p>Das Beispiel hierfür ist etwas länger, um für Anschauungszwecke die
+Datentabelle erst etwas einzukürzen.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">filter</span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Arthur"</span> <span class="op">&amp;</span> <span class="va">year</span> <span class="op">==</span> <span class="fl">2020</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># speziellen Sturm auswählen</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">name</span>, <span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span>, <span class="va">wind</span>, <span class="va">pressure</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># (zur Vereinfachung) nur spezifische Spalten</span></span>
+<span>  <span class="co"># Verteile Wind und Druck in separate Zeilen mit entsprechenden Labels in einer neuen Spalte "measure"</span></span>
+<span>  <span class="fu">pivot_longer</span><span class="op">(</span>cols <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="va">wind</span>, <span class="va">pressure</span><span class="op">)</span>, names_to <span class="op">=</span> <span class="st">"measure"</span>, values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">slice_head</span><span class="op">(</span>n<span class="op">=</span><span class="fl">4</span><span class="op">)</span> <span class="co"># nur die ersten 4 Zeilen anzeigen</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 4 × 6
+  name    year month   day measure  value
+  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;    &lt;int&gt;
+1 Arthur  2020     5    16 wind        30
+2 Arthur  2020     5    16 pressure  1008
+3 Arthur  2020     5    17 wind        35
+4 Arthur  2020     5    17 pressure  1006</code></pre>
+</div>
+<p>Details und weitere Funktionen und Beispiele sind im Cheat Sheets des
+<code>tidyr</code> Paketes übersichtlich zusammengefasst.</p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf" class="external-link"><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/master/pngs/thumbnails/tidyr-thumbs.png" style="width:100.0%" alt="CLICK TO ENLARGE: cheat sheet for tidyr ackage" class="figure"></a></p>
+</section><section><h2 class="section-heading" id="textdaten-verändern-und-verwenden">Textdaten verändern und verwenden<a class="anchor" aria-label="anchor" href="#textdaten-ver%C3%A4ndern-und-verwenden"></a>
+</h2>
+<hr class="half-width">
+<p>Um Textdaten (<em>Strings</em>) zu verändern, gibt es verschiedene
+Funktionen des <code>stringr</code> Paketes, die in Kombination mit
+<code>mutate()</code> oder anderen Funktionen verwendet werden können.
+Die meisten Funktionen des <code>stringr</code> Paketes sind sehr
+intuitiv und haben eine ähnliche Syntax wie die Funktionen des
+<code>dplyr</code> Paketes. Zudem sind viele mit regulären Ausdrücken
+verwendbar, um Textdaten aufgrund von allgemeineren Textmustern zu
+erkennen und zu verändern. Alle Funktionen des <code>stringr</code>
+Paketes beginnen mit <code>str_</code> und sind in der <a href="https://stringr.tidyverse.org/reference/index.html" class="external-link">Dokumentation</a>
+aufgeführt. Einige wichtige sind:</p>
+<ul>
+<li>
+<code>str_c()</code>: Verkettet mehrere Strings zu einem, analog to
+<code>paste0()</code>
+</li>
+<li>
+<code>str_detect()</code>: Prüft, ob ein String einen bestimmten
+Textteil enthält</li>
+<li>
+<code>str_replace()</code>: Ersetzt einen Teil eines Strings durch
+einen anderen</li>
+<li>
+<code>str_to_lower()</code>/<code>str_to_upper</code>: Wandelt alle
+Buchstaben in Klein-/Grossbuchstaben um</li>
+<li>
+<code>str_sub()</code>: Extrahiert einen Teil eines Strings</li>
+<li>
+<code>str_trim()</code>: Entfernt Leerzeichen am Anfang und Ende
+eines Strings</li>
+<li>
+<code>str_extract()</code>: Extrahiert einen Teil eines Strings, der
+einem bestimmten Muster entspricht</li>
+<li>
+<code>str_remove()</code>: Entfernt einen Teil eines Strings, der
+einem bestimmten Muster entspricht</li>
+<li>
+<code>str_split()</code>: Teilt einen String an einem bestimmten
+Trennzeichen auf</li>
+</ul>
+<p>Die meisten Funktionen liefern nur einen Treffer oder verändern nur
+den ersten Treffer. Daher gibt es von vielen Funktionen Varianten, die
+alle Treffer finden und/oder verarbeiten, z.B.
+<code>str_detect_all()</code>, <code>str_replace_all()</code>,
+<code>str_extract_all()</code>.</p>
+<p>Die Funktionen sind im <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/master/strings.pdf" class="external-link"><code>stringr</code>
+Cheat Sheet</a> zusammengefasst.</p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf" class="external-link"><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/thumbnails/strings-cheatsheet-thumbs.png" style="width:100.0%" alt="CLICK TO ENLARGE: cheat sheet for stringr ackage" class="figure"></a></p>
+<p>Beispiele für deren Verwendung mit <code>mutate()</code> und
+Co. sind:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Beispiel: Grossbuchstaben in Spalte "name" in Kleinbuchstaben umwandeln</span></span>
+<span><span class="co"># (und nur eindeutige Einträge in Spalte "name" anzeigen)</span></span>
+<span><span class="fu">mutate</span><span class="op">(</span><span class="va">storms</span>, name <span class="op">=</span> <span class="fu">str_to_lower</span><span class="op">(</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">name</span><span class="op">)</span></span>
+<span><span class="co"># Beispiel: Jahrhundert aus Spalte "year" extrahieren</span></span>
+<span><span class="fu">mutate</span><span class="op">(</span><span class="va">storms</span>, century <span class="op">=</span> <span class="fu">str_sub</span><span class="op">(</span><span class="va">year</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">name</span>, <span class="va">century</span><span class="op">)</span></span>
+<span> <span class="co"># oder via regulärem Ausdruck</span></span>
+<span><span class="fu">mutate</span><span class="op">(</span><span class="va">storms</span>, century <span class="op">=</span> <span class="fu">str_extract</span><span class="op">(</span><span class="va">year</span>, <span class="st">"^\\d{2}"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">mutate</span><span class="op">(</span><span class="va">storms</span>, century <span class="op">=</span> <span class="fu">str_remove</span><span class="op">(</span><span class="va">year</span>, <span class="st">"..$"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># Beispiel: Nur Stürme mit "storm" im Status behalten</span></span>
+<span><span class="fu">filter</span><span class="op">(</span><span class="va">storms</span>, <span class="fu">str_detect</span><span class="op">(</span><span class="va">status</span>, <span class="st">"storm"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">distinct</span><span class="op">(</span><span class="va">name</span><span class="op">)</span></span></code></pre>
+</div>
+<p>Beachte:</p>
+<ol style="list-style-type: decimal">
+<li>wenn die (Daten)Eingabe einer <code>stringr</code> Funktion ein
+<em>Vektor</em> ist, wird die Funktion auf jedes Element des Vektors
+angewendet und gibt einen Vektor mit den Ergebnissen zurück. (=
+<em>vektorisierte Prozessierung</em> = zentrales Verarbeitungsprinzip in
+R)</li>
+<li>wenn die Eingabe <em>kein</em> String ist (z.B. eine Zahl), wird die
+Eingabe in einen String umgewandelt und die Funktion auf den
+entstandenen String angewendet. (= <em>automatische Typumwandlung</em>,
+sogenanntes <em>coercion</em> in R)</li>
+</ol></section><section><h2 class="section-heading" id="reguläre-ausdrücke">Reguläre Ausdrücke<a class="anchor" aria-label="anchor" href="#regul%C3%A4re-ausdr%C3%BCcke"></a>
+</h2>
+<hr class="half-width">
+<p>Für komplexe Textverarbeitung werden oft reguläre Ausdrücke
+verwendet. Diese erlauben es, Textmuster zu definieren, die in einem
+Text gesucht, ersetzt oder extrahiert werden können.</p>
+<p>Für eine Einführung in reguläre Ausdrücke siehe <a href="https://www.regexone.com/" class="external-link">RegexOne Tutorial</a> oder <a href="https://rstudio.github.io/cheatsheets/regex.pdf" class="external-link">RStudio RegEx
+Cheat Sheet (pdf)</a>.</p>
+<div id="reguläre-ausdrücke-1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="reguläre-ausdrücke-1" class="callout-inner">
+<h3 class="callout-title">Reguläre Ausdrücke</h3>
+<div class="callout-content">
+<p>Betrachten sie noch einmal die beiden <code>mutate()</code> Beispiele
+von oben, in denen das Jahrhundert aus der Spalte “year” mit Hilfe von
+regulären Ausdrücken extrahiert wird.</p>
+<p><em>Was genau definieren die beiden regulären Ausdrücke
+<code>^\\d{2}</code> und <code>..$</code>?</em></p>
+</div>
+</div>
+</div>
+<div id="accordionSolution6" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
+  <h4 class="accordion-header" id="headingSolution6">
+  Lösung
+  </h4>
+</button>
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div class="accordion-body">
+<ul>
+<li>
+<code>^\\d{2}</code> = “die ersten zwei (<code>{2}</code>) Ziffern
+(<code>\\d</code>) am Textanfang (<code>^</code>)”
+<ul>
+<li>hier genutzt um das Jahrhundert mit <code>str_extract()</code> zu
+extrahieren</li>
+</ul>
+</li>
+<li>
+<code>..$</code> = “die letzten zwei beliebigen Zeichen
+(<code>..</code>) am Ende des Textes (<code>$</code>)”
+<ul>
+<li>hier genutzt um die letzten zwei Zeichen (Jahrzehnt) mit
+<code>str_remove()</code> zu entfernen</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="daten-zusammenführen">Daten zusammenführen<a class="anchor" aria-label="anchor" href="#daten-zusammenf%C3%BChren"></a>
+</h2>
+<hr class="half-width">
+<p>Oftmals liegen daten in mehreren Tabellen vor, die zusammengeführt
+werden müssen, um die Daten zu analysieren. Zum Beispiel können Daten in
+einer Tabelle die Anzahl der Sturmtage pro Jahr enthalten und in einer
+anderen Tabelle die Kosten für Sturmschäden pro Jahr.</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Datensatz mit Sturmschäden pro Jahr (zufällige Werte) für 2015-2024</span></span>
+<span><span class="va">costs</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu">tibble</span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2015</span><span class="op">:</span><span class="fl">2024</span>, <span class="co"># Jahresbereich festlegen</span></span>
+<span>         costs <span class="op">=</span> <span class="fu">runif</span><span class="op">(</span><span class="fu">length</span><span class="op">(</span><span class="va">year</span><span class="op">)</span>, <span class="fl">1e6</span>, <span class="fl">1e8</span><span class="op">)</span><span class="op">)</span> <span class="co"># Zufallsdaten gleichverteilt erzeugen</span></span>
+<span></span>
+<span><span class="co"># Anzahl der Sturmtage pro Jahr</span></span>
+<span><span class="va">stormyDays</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Datensatz in Einzeljahre aufteilen</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># nur eine Zeile pro Monat/Jahr Kombination (pro Jahr) behalten</span></span>
+<span>  <span class="fu">distinct</span><span class="op">(</span><span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># zählen, wie viele Zeilen pro Jahr noch vorhanden sind</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Beispiel (1): Sturmtaginformation (links) mit Kosteninformation (rechts) ergänzen</span></span>
+<span><span class="co"># BEACHTE: für Jahre ohne Eintrag in `costs` wird `NA` eingetragen !</span></span>
+<span><span class="fu">left_join</span><span class="op">(</span><span class="va">stormyDays</span>, <span class="va">costs</span>, by <span class="op">=</span> <span class="st">"year"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># nur die ersten und letzten 3 Zeilen anzeigen</span></span>
+<span>  <span class="fu">slice</span><span class="op">(</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, <span class="op">(</span><span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">-</span><span class="fl">2</span><span class="op">)</span><span class="op">:</span><span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Beispiel (2): nur Datensätze für die beides, d.h. Sturmtage als auch Kosten, vorhanden ist</span></span>
+<span><span class="fu">inner_join</span><span class="op">(</span><span class="va">stormyDays</span>, <span class="va">costs</span>, by <span class="op">=</span> <span class="st">"year"</span><span class="op">)</span></span></code></pre>
+</div>
+<div id="spaltennamen" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="spaltennamen" class="callout-inner">
+<h3 class="callout-title">Spaltennamen</h3>
+<div class="callout-content">
+<p>Studieren sie die <a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">Hilfeseite
+der join Funktionen</a> und finden sie heraus, <em>wie sie die
+Spaltennamen der beiden Tabellen angeben können</em>, um die Daten zu
+verbinden, wenn die gemeinsamen Daten in unterschiedlich benannten
+Spalten stehen.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution7" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
+  <h4 class="accordion-header" id="headingSolution7">
+  Lösung
+  </h4>
+</button>
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div class="accordion-body">
+<p>Das mapping der Spalten erfolgt über einen <em>benannten Vektor</em>,
+d.h. die Spaltennamen der linken Tabelle werden als Elementnamen für die
+entsprechenden Spaltennamen der rechten Tabelle verwendet:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">stormyDays</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">rename</span><span class="op">(</span> Jahr <span class="op">=</span> <span class="va">year</span> <span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># Jahresspalte exemplarisch umbenannt</span></span>
+<span>  <span class="fu">filter</span><span class="op">(</span> <span class="va">Jahr</span> <span class="op">&gt;=</span> <span class="fl">2013</span> <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># geänderte Sturmtaginformation (links) aus der pipe</span></span>
+<span>  <span class="co"># mit Kosteninformation (rechts) aus expliziter Tabelle "costs" ergänzen</span></span>
+<span>  <span class="fu">left_join</span><span class="op">(</span> <span class="va">costs</span>, </span>
+<span>      <span class="co"># Explizites mapping von costs$year auf die "Jahr" Spalte der linken Tabelle</span></span>
+<span>      <span class="co"># Beachten sie das quoting der Spaltennamen!</span></span>
+<span>             by <span class="op">=</span> <span class="fu">c</span><span class="op">(</span>Jahr <span class="op">=</span> <span class="st">"year"</span><span class="op">)</span></span>
+<span>      <span class="co"># Alternativ kann das mapping auch über eine Funktion erfolgen:</span></span>
+<span>      <span class="co"># Hier sind keine Anführungszeichen notwendig:</span></span>
+<span>      <span class="co">#  by = join_by(Jahr = year)</span></span>
+<span>      <span class="op">)</span> </span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Speichern sie Daten nur in Variablen zwischen, wenn sie diese Daten
+mehrfach benötigen.</li>
+<li>Verwenden sie Pipes (<code>|&gt;</code>) um Daten durch eine Reihe
+von Transformationen zu leiten.</li>
+<li>Versuchen sie die Datenverarbeitung in kleine, leicht verständliche
+Schritte zu unterteilen.</li>
+<li>Vermeiden sie unnötige Schleifen und Schachtelungen, das meiste
+lässt sich mit Grouping, vektorisierten Operationen und Joins kompakter
+und eleganter lösen.</li>
+<li>Auch explizite Elementzugriffe (z.B. <code>df$col</code>) und
+-operationen können i.d.R. effizient durch <code>dplyr</code> Funktionen
+ersetzt werden.</li>
+<li>Zusammenfassungen der Pakete:
+<ul>
+<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf" class="external-link"><code>dplry</code>
+Cheat Sheet</a></li>
+<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf" class="external-link"><code>tidyr</code>
+Cheat Sheet</a></li>
+<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf" class="external-link"><code>stringr</code>
+Cheat Sheet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<p>Dieses Dokument wurde mit Unterstützung von GitHub Copilot erstellt,
+einem KI-gestützten Autocompletion-Tool, das auf der OpenAI
+GPT-3-Technologie basiert.</p>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-Visualisierung"><p>Content from <a href="Visualisierung.html">Visualisierung</a></p>
+<hr>
+<p>Last updated on 2025-06-25 |
+
+        <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/edit/main/episodes/Visualisierung.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Wie visualisiere ich Daten?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Datenvisualisierung mit <code>ggplot2</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Die Visualisierung von Daten ist ein wichtiger Bestandteil der
+Datenanalyse, da sie es ermöglicht, Muster und Zusammenhänge in den
+Daten zu erkennen und zu kommunizieren. In R wird die Visualisierung von
+Daten mit dem <code>ggplot2</code> Paket durchgeführt, das auf der <a href="https://r4ds.had.co.nz/data-visualisation.html" class="external-link"><em>Grammar of
+Graphics</em></a> basiert. Hierbei müssen die Daten in tabellarischer
+Form vorliegen, d.h. jede Zeile entspricht einem Datensatz und jede
+Spalte einer Variable (“tidy data”).</p>
+<p>Die Visualisierung von Daten wird in verschiedene Schichten (z.B.
+Punkte, Linien, Balken) und Eigenschaften (z.B. x-Achse, y-Achse, Farbe,
+Form) unterteilt. Die Verküpfung von Tabellenspalten mit den Ebenen und
+Eigenschaften (d.h. Welche Information wird wie fürs Plotting verwendet)
+erfolgt über das Argument <code>mapping =</code> und die
+<code>aes()</code> Funktion. Schichten (z.B. Balken, Linien, Punkte)
+werden mit <code>geom_*()</code> Funktionen hinzugefügt, wobei die Daten
+für die Schicht über das Argument <code>data =</code> übergeben
+werden.</p>
+<p>Im Folgenden wird ein umfangreiches Beispiel für die Visualisierung
+von Daten mit <code>ggplot2</code> gezeigt, bei dem die Anzahl der
+Stürme pro Jahr visualisiert wird.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Beispiel: Anzahl der Stürme pro Jahr visualisieren</span></span>
+<span></span>
+<span><span class="co"># Rohdatensatz startet Visualisierungsworkflow</span></span>
+<span><span class="va">storms</span> <span class="op">|&gt;</span></span>
+<span></span>
+<span>  <span class="co">########### Datenvorbereitung #############</span></span>
+<span></span>
+<span>  <span class="co"># auf einen Eintrag (Zeile) pro Sturm und Jahr reduzieren</span></span>
+<span>  <span class="fu">distinct</span><span class="op">(</span><span class="va">year</span>, <span class="va">name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Anzahl der Stürme pro Jahr zählen</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span></span>
+<span>  <span class="co">########### Datenvisualisierung #############</span></span>
+<span></span>
+<span>  <span class="co"># ggplot-Objekt erstellen (Daten via pipe übergeben)</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y<span class="op">=</span><span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="co"># Verknüpfung von Datenspalten (year, n) und Achsen (x,y)</span></span>
+<span>  <span class="co"># Diagrammtitel und Achsenbeschriftung</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Anzahl der Stürme pro Jahr"</span>, x <span class="op">=</span> <span class="st">"Jahr"</span>, y <span class="op">=</span> <span class="st">"Anzahl"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># grundlegende Diagrammformatierung (Hintergrundfarben, Schriftarten, ...)</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Balkendiagramm mit Anzahl der Stürme pro Jahr</span></span>
+<span>  <span class="fu">geom_bar</span><span class="op">(</span>fill<span class="op">=</span><span class="st">"skyblue3"</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># gepunktete horizontale Linie bei 20</span></span>
+<span>  <span class="fu">geom_hline</span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">20</span>, linetype<span class="op">=</span><span class="st">"dotted"</span>, col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Highlighting der Jahre mit mehr als 20 Stürmen</span></span>
+<span>  <span class="fu">geom_vline</span><span class="op">(</span>data <span class="op">=</span> <span class="op">~</span> <span class="fu">filter</span><span class="op">(</span><span class="va">.x</span>, <span class="va">n</span><span class="op">&gt;</span><span class="fl">20</span><span class="op">)</span>,  <span class="co"># Datensatz einschränken</span></span>
+<span>            <span class="co"># (hier `.x` = Platzhalter für Daten aus vorheriger Ebene, d.h. `storms`)</span></span>
+<span>            <span class="fu">aes</span><span class="op">(</span>xintercept<span class="op">=</span><span class="va">year</span><span class="op">)</span>, <span class="co"># welche (Teil)Tabellendaten für Position zu verwenden</span></span>
+<span>            color<span class="op">=</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span> <span class="co"># Zusätzliche Formatierung</span></span>
+<span>  <span class="co"># Jahreszahlen der Jahre mit mehr als 20 Stürmen in schräger Textausrichtung</span></span>
+<span>  <span class="fu">geom_text</span><span class="op">(</span>data <span class="op">=</span> <span class="op">~</span> <span class="fu">filter</span><span class="op">(</span><span class="va">.x</span>, <span class="va">n</span><span class="op">&gt;</span><span class="fl">20</span><span class="op">)</span>, <span class="co"># Datensatz einschränken</span></span>
+<span>            <span class="fu">aes</span><span class="op">(</span>label<span class="op">=</span><span class="va">year</span>, x<span class="op">=</span><span class="va">year</span>, y<span class="op">=</span><span class="fu">max</span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span>, <span class="co"># Daten und Positionen festlegen</span></span>
+<span>            angle<span class="op">=</span><span class="fl">70</span>, vjust<span class="op">=</span><span class="fl">0.5</span>, hjust<span class="op">=</span><span class="op">-</span><span class="fl">0.6</span>, size<span class="op">=</span><span class="fl">3</span>, color<span class="op">=</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span> <span class="co"># Textformatierung</span></span>
+<span>  <span class="co"># disable clipping um Jahreszahltexte außerhalb des Diagrammbereichs anzuzeigen</span></span>
+<span>  <span class="fu">coord_cartesian</span><span class="op">(</span>clip <span class="op">=</span> <span class="st">"off"</span><span class="op">)</span></span></code></pre>
+</div>
+<figure><img src="fig/Visualisierung-rendered-ggplot2-examples-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># optional: (zuletzt gemaltes) Diagramm speichern</span></span>
+<span><span class="fu">ggsave</span><span class="op">(</span><span class="st">"storms_per_year.png"</span>, width<span class="op">=</span><span class="fl">10</span>, height<span class="op">=</span><span class="fl">5</span>, dpi<span class="op">=</span><span class="fl">300</span><span class="op">)</span></span></code></pre>
+</div>
+<p>Als Nachschlagewerk empfiehlt sich das offizielle Cheat Sheet des
+<code>ggplot2</code> Pakets, welches die wichtigsten Funktionen und
+Argumente übersichtlich darstellt:</p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf" class="external-link"><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/thumbnails/data-visualization-cheatsheet-thumbs.png" style="width:100.0%" alt="CLICK TO ENLARGE: cheat sheet for ggplot2 ackage" class="figure"></a></p>
+<div id="sturmposition-visualisieren" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="sturmposition-visualisieren" class="callout-inner">
+<h3 class="callout-title">Sturmposition visualisieren</h3>
+<div class="callout-content">
+<p>Zeichnen sie ein Punktdiagram, welches für folgenden Datensatz</p>
+<ul>
+<li>Länge (x-Achse) und Breite (y-Achse) der Messung zeigt und die
+Punkte anhand des Sturmstatus einfärbt,</li>
+<li>die Achsen mit “Länge” und “Breite” beschriftet, und</li>
+<li>den Diagrammtitel “Sturmposition” hat.</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>storms <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">group_by</span>(name,year) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">slice_tail</span>(<span class="at">n=</span><span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="co"># .. </span><span class="al">TODO</span><span class="co">: ggplot2 code hier einfügen ..</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">storms</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">name</span>,<span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">slice_tail</span><span class="op">(</span>n<span class="op">=</span><span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">long</span>, y <span class="op">=</span> <span class="va">lat</span>, color <span class="op">=</span> <span class="va">status</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title<span class="op">=</span><span class="st">"Sturmposition"</span>,</span>
+<span>    x<span class="op">=</span><span class="st">"Länge"</span>,</span>
+<span>    y<span class="op">=</span><span class="st">"Breite"</span>,</span>
+<span>    color<span class="op">=</span><span class="st">"Status"</span> <span class="co"># ansonsten klein geschrieben</span></span>
+<span>  <span class="op">)</span></span></code></pre>
+</div>
+<figure><img src="fig/Visualisierung-rendered-ggplot2-exercises-solution-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># alternatively</span></span>
+<span><span class="co"># geom_title("Sturmposition") + geom_xlab("Länge") + geom_ylab("Breite") + geom_color("Status")</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>
+<code>ggplot2</code> benötigt einen <code>data.frame</code> als
+Eingabe, welcher “tidy” ist (d.h. eine Zeile pro Beobachtung und eine
+Spalte pro Variable).</li>
+<li>Das <code>mapping</code> Argument ermöglicht mittels der
+<code>aes()</code> Funktion die Verknüpfung von Variablen des
+Datensatzes (d.h. Spaltennamen) mit visuellen Eigenschaften (z.B.
+x-Achse, Farbe, Größe).</li>
+<li>
+<code>geom_*</code> Funktionen fügen dem Plot Schichten hinzu (z.B.
+Punkte, Linien, Balken).</li>
+<li>
+<code>labs()</code> ermöglicht die Anpassung von Diagrammtitel und
+Achsenbeschriftung.</li>
+<li>
+<code>theme_*</code> Funktionen ermöglichen die Anpassung genereller
+Diagrammformatierungen (z.B. Hintergrundfarben, Schriftarten).</li>
+<li>Es gibt viele weitere Funktionen und Argumente, um die Darstellung
+von Diagrammen zu verfeinern (z.B. <code>facet_wrap()</code>,
+<code>scale_*</code>, <code>coord_*</code>).</li>
+<li>Diagramme mit <code>ggsave()</code> in beliebigem Dateiformat (PNG,
+PDF, SVG, ..) speichern.</li>
+<li>Ausserdem gibt es viele Erweiterungen für <code>ggplot2</code> (z.B.
+<code>ggplotly</code>, <code>ggrepel</code>), die zusätzliche
+Funktionalitäten oder Visualisierungstypen/-diagramme bieten.</li>
+<li>Zusammenfassung im <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf" class="external-link"><code>ggplot2</code>
+Cheat Sheet</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<p>Dieses Dokument wurde mit Unterstützung von GitHub Copilot erstellt,
+einem KI-gestützten Autocompletion-Tool, das auf der OpenAI
+GPT-3-Technologie basiert.</p></section>
 </div>
     </main>
 </div>
@@ -502,12 +2022,12 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-rmd/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-rmd/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/Dr-Eberle-Zentrum/R-tidyverse-compact/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:info@eberle-zentrum.uni-tuebingen.de">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -527,16 +2047,16 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-rmd/aio.html",
+  "@id": "https://Dr-Eberle-Zentrum.github.io/R-tidyverse-compact/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "R, tidyverse, Überblick",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-rmd/aio.html",
-  "identifier": "https://carpentries.github.io/workbench-template-rmd/aio.html",
-  "dateCreated": "2025-06-25",
+  "url": "https://Dr-Eberle-Zentrum.github.io/R-tidyverse-compact/aio.html",
+  "identifier": "https://Dr-Eberle-Zentrum.github.io/R-tidyverse-compact/aio.html",
+  "dateCreated": "2024-07-05",
   "dateModified": "2025-06-25",
   "datePublished": "2025-06-25"
 }
