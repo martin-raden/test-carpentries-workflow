@@ -1,0 +1,160 @@
+---
+title: "Datenimport aus Dateien"
+teaching: 20
+exercises: 10
+---
+
+
+
+
+:::::::::::::::::::::::::::::::::::::: questions
+
+- Wie importiere ich Daten? (`readr`, `readxl`, ...)
+- Auf was muss ich achten?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Datenimport via `readr` und `readxl`
+- Kodierung von Zahlen und Texten
+- Pfadangaben
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+In R können Daten aus verschiedenen Quellen und von verschiedenen Orten eingelesen werden.
+
+Die gängigsten Quellen sind:
+
+- Textdateien (z.B. `.csv`, `.tsv`, `.txt`)
+- Excel-Dateien (z.B. `.xlsx`, `.xls`)
+- Datenbanken (z.B. `MySQL`, `PostgreSQL`, `SQLite`)
+
+Die gängigsten Orte sind:
+
+- lokale Dateien
+- URLs, also direkter Datenimport aus dem Internet oder lokalem Netzwerk
+
+Im Folgenden einige Beispiele zum Einlesen von Daten aus Dateien in R.
+Die lokalen Dateien müssen sich im *Arbeitsverzeichnis* befinden, das mit `getwd()` abgefragt und mit `setwd()` gesetzt werden kann (oder mit entsprechenden Menüeinträgen in RStudio), oder mit vollem Verzeichnisinformationen angegeben werden (nicht gezeigt und nicht empfohlen).
+Um den folgenden Beispielcode mit lokalen Dateien auszuführen, müssen daher die Dateien [storms-2019-2021.csv](data/storms-2019-2021.csv) und [storms-2019-2021.xlsx](data/storms-2019-2021.xlsx) erst ins aktuelle Arbeitsverzeichnis gedownloaded werden.
+
+
+
+``` r
+library(readr)
+# CSV aus dem Internet
+read_csv("https://raw.githubusercontent.com/tidyverse/dplyr/master/data-raw/storms.csv")
+
+# lokale Excel-Datei
+readxl::read_xlsx("storms-2019-2021.xlsx",
+                  sheet = "storms-2020") # explizite Angabe des Tabellenblatts
+
+# lokale CSV Datei Semikolon getrennt (";") und mit westeuropäischem Zahlenformat ("," als Dezimaltrenner)
+read_csv2("storms-2019-2021.csv")
+
+# explizites Einstellen des Daten- und Dateiformats
+# (hier analog zu den Standardeinstellungen von `read_csv2()`)
+read_delim(
+  "storms-2019-2021.csv", # Dateiname
+  delim = ";", # Spaltentrenner der Datei
+  locale = locale( # zusätzliche Einstellungen wie gespeicherte Informationen kodiert sind
+    decimal_mark = ",", # Dezimaltrenner
+    grouping_mark = ".", # Tausendertrenner
+    encoding = "latin1" # (alte) westeuropäisches Buchstabenkodierung (z.B. Umlaute)
+    )
+  )
+```
+
+Beachten sie im letzten Beispiel das explizite Setzen des Textencodings, um sicherzustellen, dass Umlaute korrekt eingelesen werden (hier im Beispiel wird `latin1` verwendet, was für westeuropäische Länder wie Deutschland oder Frankreich üblich ist bzw. war).
+Dies ist vor allem beim *Import von alten Daten* wichtig, die in einem anderen Zeichensatz kodiert sein könnten.
+Heutzutage wird meist `UTF-8` verwendet, was ein internationaler Standard ist und alle Zeichen korrekt darstellt.
+Dies ist auch das Standardencoding für die meisten Funktionen wie z.B. in `readr` und `readxl`.
+
+Zudem wird im obigen `read_delim()` Beispiel die Zahlenkodierung explizit gesetzt.
+Das heisst, dass Dezimaltrenner und Tausendertrenner explizit angegeben werden, da z.B. westeuropäische Länder wie Deutschland oder Frankreich Dezimaltrenner und Tausendertrenner vertauscht haben im Vergleich zu englischsprachigen Ländern (welche die Standardspezifikationen für CSV-Dateien sind).
+Daher wird in den meisten Skriptsprachen eine zusätzliche CSV-Datei-Spezifikation `read_csv2()` angeboten, die explizit für westeuropäische Länder konfiguriert ist und implizit die Spalten- und Dezimaltrennzeichen wie im obigen Beispiel setzt.
+
+Das Schreiben von Dateien erfolgt analog, indem einfach `write_`
+anstelle von `read_` verwendet wird.
+
+Die Funktionen des `readr` Paketes sind übersichtlich in dessen Cheat Sheet zusammengefasst.
+
+[![dplyr cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/thumbnails/data-import-cheatsheet-thumbs.png){width="100%" alt="CLICK TO ENLARGE: cheat sheet for readr ackage"}](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf)
+
+
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Frage zu CSV Import
+
+*Was ist der Unterschied zwischen `read_csv()` und `read_csv2()`?*
+
+:::::::::::::::::::::::: solution
+
+### Antwort
+
+`read_csv()` und `read_csv2()` sind Funktionen aus dem `readr` package, die beide CSV-Dateien einlesen können. Der Unterschied liegt in der Standardkonfiguration der Funktionen. `read_csv()` ist für CSV-Dateien mit Komma als Dezimaltrenner und Punkt als Tausendertrenner konfiguriert (z.B. für englische oder amerikanische Datenkodierungen), während `read_csv2()` für CSV-Dateien mit Semikolon als Spaltentrenner und Komma als Dezimaltrenner konfiguriert ist (wie es in Westeuropa wie Deutschland oder Frankreich Standard ist).
+
+:::::::::::::::::::::::::::::::::
+
+
+## Aufgabe: Datenimport
+
+Führen sie die obigen Beispiele aus und passen sie sie an, um die Dateien `storms-2019-2021.csv` und `storms-2019-2021.xlsx` einzulesen. Hierzu müssen diese Dateien ggf. zuvor gedownloaded werden (oder sie verwenden direkt die URL zu den online verfügbaren Dateien).
+
+*Wieviele Zeilen haben die jeweiligen Datensätze? Und wie erklärt sich der Unterschied?*
+
+:::::::::::::::::::::::: solution
+
+## Antwort
+
+Die Datensätze haben unterschiedliche Größen:
+
+- `storms-2019-2021.csv` hat 19 Zeilen, es umfasst die Jahre 2019-2021.
+- `storms-2019-2021.xlsx` hat 10 Zeilen, es umfasst nur das Jahr 2020 da nur ein einzelnes Datenblatt importiert wurde.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Pfade und Arbeitsverzeichnis
+
+In R können Dateien relativ zum *Arbeitsverzeichnis* geladen werden. Das Arbeitsverzeichnis ist der Ordner, in dem R nach Dateien sucht, wenn keine vollständigen Pfade angegeben sind. Das Arbeitsverzeichnis kann mit `getwd()` abgefragt und mit `setwd()` geändert werden.
+In RStudio kann das Arbeitsverzeichnis auch über das Menü "Session" -> "Set Working Directory" -> "To Source File Location" gesetzt werden.
+
+Dies erlaubt das Laden von Dateien ohne Angabe des vollständigen Pfades, wenn sich die Dateien im Arbeitsverzeichnis befinden.
+Der große Vorteil ist, dass der Code portabler wird, da er nicht mehr von absoluten Pfaden (also wwo die Daten auf ihrem Computer genau liegen) abhängt.
+
+Alternativ können auch *relative Pfade* verwendet werden, um Dateien in Unterordnern relativ zum Arbeitsverzeichnis zu laden. Zum Beispiel, wenn sich die Datei `data.csv` im Unterordner `data` des Arbeitsverzeichnisses befindet, kann sie mit `read_csv("data/data.csv")` geladen werden.
+
+Wenn nötig, können auch vollständige Pfade verwendet werden, um Dateien von beliebigen Orten auf dem Computer zu laden. Das nennt man dann einen *absoluten Pfad*.
+Ein Beispiel auf einem Windows-System wäre `read_csv("C:/Users/Username/Documents/data.csv")`.
+
+Wenn sie die letzte Pfadangabe mit der Standard-Windows-Schreibweise vergleichen, werden sie feststellen, dass diese normalerweise mit Backslashes `\` arbeitet, also hier `"C:\Users\Username\Documents\data.csv"`.
+Das Problem ist, dass der Backslash in R als Escape-Zeichen verwendet wird, um spezielle TEXT-Zeichen zu kodieren. Daher wird der Backslash in Pfadangaben in R oft verdoppelt, um dies zu umgehen. Also würde der Pfad in R so aussehen: `"C:\\Users\\Username\\Documents\\data.csv"`.
+Alternativ können sie auch in Windows (wie im obigen Beispiel) die "Linux-Schreibweise" verwenden, die mit Schrägstrichen `/` arbeitet, die in R ohne Probleme verwendet werden können.
+
+Falls sie unbedingt (z.B. für Copy-and-Paste Einfügen) die Backslash-Notation der Pfade verwenden wollen, aber nicht Umformatieren möchten, können sie den Pfad auch als [*raw string*](https://r4ds.hadley.nz/strings.html#sec-raw-strings) codieren, in dem sie ihn statt mit Anführungszeichen `""` mit `r"()"` umschließen. Also in obigem Beispiel `r"(C:\Users\Username\Documents\data.csv)"`, wobei sie runde durch eckige Klammern tauschen können, falls ihr Pfad auch runde Klammern enthält.
+
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Dateinamen sind Textinformation und müssen in Anführungszeichen gesetzt werden.
+- Pfade können absolut (eher schlecht) oder relativ zum Arbeitsverzeichnis angegeben werden. Letzteres ist portabler und empfohlen.
+- Das Arbeitsverzeichnis kann mit `getwd()` und `setwd()` abgefragt und gesetzt werden.
+- In Microsoft Windows können Pfade auch mit Schrägstrichen `/` statt Backslashes `\` geschrieben werden.
+- Achten sie auf die korrekte Kodierung von Textdateien, um Umlaute und Sonderzeichen korrekt einzulesen.
+- Denken sie daran, dass deutsche CSV-Dateien oft Semikolon (`;`) als Trennzeichen und Komma `,` als Dezimaltrenner verwenden.
+- Excel-Dateien enthalten i.d.R. mehrere Blätter, die einzeln importiert werden müssen.
+- Zusammenfassung im [`readr` Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf)
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+-----------------------------------------------
+
+Dieses Dokument wurde mit Unterstützung von GitHub Copilot erstellt, einem KI-gestützten Autocompletion-Tool, das auf der OpenAI GPT-3-Technologie basiert.
+
