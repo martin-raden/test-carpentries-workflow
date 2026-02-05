@@ -70,7 +70,7 @@ storms |>
   coord_cartesian(clip = "off")
 ```
 
-<img src="fig/Visualisierung-rendered-ggplot2-examples-1.png" style="display: block; margin: auto;" />
+<img src="fig/Visualisierung-rendered-ggplot2-examples-1.png" alt="" style="display: block; margin: auto;" />
 
 
 ``` r
@@ -120,7 +120,7 @@ storms |>
   )
 ```
 
-<img src="fig/Visualisierung-rendered-ggplot2-exercises-solution-1.png" style="display: block; margin: auto;" />
+<img src="fig/Visualisierung-rendered-ggplot2-exercises-solution-1.png" alt="" style="display: block; margin: auto;" />
 
 ``` r
 # alternatively

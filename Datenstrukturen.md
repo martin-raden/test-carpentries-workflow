@@ -35,7 +35,7 @@ dplyr::storms
 ```
 
 ``` output
-# A tibble: 19,537 × 13
+# A tibble: 20,778 × 13
    name   year month   day  hour   lat  long status      category  wind pressure
    <chr> <dbl> <dbl> <int> <dbl> <dbl> <dbl> <fct>          <dbl> <int>    <int>
  1 Amy    1975     6    27     0  27.5 -79   tropical d…       NA    25     1013
@@ -48,7 +48,7 @@ dplyr::storms
  8 Amy    1975     6    28    18  34   -77   tropical d…       NA    30     1006
  9 Amy    1975     6    29     0  34.4 -75.8 tropical s…       NA    35     1004
 10 Amy    1975     6    29     6  34   -74.8 tropical s…       NA    40     1002
-# ℹ 19,527 more rows
+# ℹ 20,768 more rows
 # ℹ 2 more variables: tropicalstorm_force_diameter <int>,
 #   hurricane_force_diameter <int>
 ```

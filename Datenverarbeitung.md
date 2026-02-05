@@ -204,7 +204,7 @@ storms |>
 ```
 
 ``` output
-# A tibble: 48 × 2
+# A tibble: 50 × 2
     year max_wind
    <dbl>    <int>
  1  1975      120
@@ -217,7 +217,7 @@ storms |>
  8  1982      115
  9  1983      100
 10  1984      115
-# ℹ 38 more rows
+# ℹ 40 more rows
 ```
 
 In diesem Beispiel wird die Tabelle `storms` nach dem Jahr gruppiert und für jede Gruppe (d.h. jedes Jahr) die maximale Windgeschwindigkeit berechnet.
@@ -250,14 +250,14 @@ Allerdings wird diese Gruppierung aufrecht erhalten, bis sie explizit aufgehoben
   status                  year name  
   <fct>                  <dbl> <chr> 
 1 tropical wave           2018 Kirk  
-2 subtropical depression  2020 Dolly 
-3 disturbance             2022 Julia 
-4 extratropical           2022 Martin
-5 subtropical storm       2022 Nicole
-6 hurricane               2022 Nicole
-7 tropical storm          2022 Nicole
-8 tropical depression     2022 Nicole
-9 other low               2022 Nicole
+2 subtropical depression  2023 Don   
+3 extratropical           2024 Patty 
+4 subtropical storm       2024 Patty 
+5 hurricane               2024 Rafael
+6 other low               2024 Rafael
+7 disturbance             2024 Sara  
+8 tropical storm          2024 Sara  
+9 tropical depression     2024 Sara  
 ```
 
 :::::::::::::::::::::
